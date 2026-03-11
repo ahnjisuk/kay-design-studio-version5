@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Outfit:wght@100;200;300;400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 0 0% 0%;
+        --primary: 0 0% 0%;
+        --primary-foreground: 0 0% 100%;
+        --muted: 0 0% 98%;
+        --muted-foreground: 0 0% 45%;
+        --accent: 0 0% 98%;
+        --accent-foreground: 0 0% 0%;
+        --border: 0 0% 92%;
+        --input: 0 0% 92%;
+        --ring: 0 0% 0%;
+        --radius: 0rem;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground antialiased;
+        font-family: 'Inter', sans-serif;
+        letter-spacing: -0.01em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-display {
+        font-family: 'Outfit', sans-serif;
+        @apply tracking-tighter;
+    }
+}
+
+@layer utilities {
+    .text-architectural {
+        @apply uppercase tracking-[0.4em] text-[10px] font-medium;
+    }
+
+    .text-hero-heading {
+        /* Fluid typography: min 3.5rem (56px) to max 10rem (160px) based on viewport width */
+        font-size: clamp(2.5rem, 8vw + 0.5rem, 10rem);
+        @apply font-extralight leading-[0.9] tracking-tighter font-display;
+    }
+
+    .glass-light {
+        @apply bg-white/70 backdrop-blur-md border-b border-white/20;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-black/10 hover:bg-black/20 transition-colors rounded-full;
+}

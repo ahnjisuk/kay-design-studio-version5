@@ -1,0 +1,16 @@
+node_modules
+dist
+v3_check
+.vercel
+.next
+.git
+.vite
+.agents
+.agent
+_agents
+_agent
+brain
+tmp
+*.log
+*.zip
+*.bak
