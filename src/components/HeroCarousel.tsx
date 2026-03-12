@@ -75,7 +75,7 @@ export const HeroCarousel = () => {
                 >
                     <h1 className="text-hero-heading text-white mb-6 md:mb-10 whitespace-pre-line  leading-none tracking-tighter">
                         {["Let's", "Build", "Together."].map((line, i) => (
-                            <span key={i} className="block overflow-hidden pb-4">
+                            <span key={i} className="block overflow-hidden pb-8">
                                 <motion.span
                                     initial={{ y: "100%", opacity: 0, scale: 0.95, filter: "blur(4px)" }}
                                     animate={{ y: 0, opacity: 1, scale: 1, filter: "blur(0px)" }}
