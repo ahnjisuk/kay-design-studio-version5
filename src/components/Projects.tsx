@@ -5,8 +5,8 @@ import { ProjectModal } from "./ProjectModal";
 
 // Category Top Images
 import hospTop from "../assets/projects/hospital/top.png";
-import resTop from "../assets/projects/residential/top.png";
-import indTop from "../assets/projects/industrial/top.png";
+import resTop from "../assets/projects/residential/top.jpg";
+import indTop from "../assets/projects/industrial/top.jpg";
 
 // Hospitality Images
 import hospFeat1 from "../assets/projects/hospital/1,2025_Malone_PJ_Showroom/top.jpg";
@@ -33,7 +33,7 @@ import resDM2 from "../assets/projects/residential/Mr_and_Mrs_Miller_Residence_A
 import resDM3 from "../assets/projects/residential/2023_KMS_Vaughn_Imbornone/top.jpg";
 
 // Industrial Images
-import indFeat1 from "../assets/projects/industrial/1,2024_HMGMA_Lobby/top.png";
+import indFeat1 from "../assets/projects/industrial/1,2024_HMGMA_Lobby/1.png";
 import indFeat2 from "../assets/projects/industrial/2,Atlanta_Classic_Cars_Duluth_GA/top.avif";
 import indFeat3 from "../assets/projects/industrial/3,KIA_Souvenir_Shop_Lobby_West_Point_GA/top.png";
 import indDM1 from "../assets/projects/industrial/Hyundai_PowerTech_West_Point_GA/top.avif";
