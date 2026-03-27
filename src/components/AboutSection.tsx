@@ -4,12 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 // Slide images
 import slide1 from "../assets/about/slide-1.png";
 import slide2 from "../assets/about/slide-2.png";
-import slide3 from "../assets/about/slide-3.png";
-import slide4 from "../assets/about/slide-4.png";
-import slide5 from "../assets/about/slide-5.png";
+import slide3 from "../assets/about/slide-5.png";
 import philosophyBg from "../assets/about/philosophy-bg.jpg";
 
-const slides = [slide1, slide2, slide3, slide4, slide5];
+const slides = [slide1, slide2, slide3];
 
 export const AboutSection = () => {
     const [currentIdx, setCurrentIdx] = useState(0);
