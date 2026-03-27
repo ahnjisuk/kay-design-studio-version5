@@ -8,7 +8,7 @@ export const Footer = () => {
                     <div className="lg:col-span-1">
                         <h3 className="text-architectural mb-12">Kay Design Studio</h3>
                         <p className="text-xs text-muted-foreground font-light leading-relaxed max-w-[200px]">
-                            a unified vision of architectural transformation.
+                            Let's Build Together.
                         </p>
                     </div>
 

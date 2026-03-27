@@ -1,36 +1,18 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Instagram } from "lucide-react";
-import heroImage1 from "../assets/hero/1.avif";
-import heroImage2 from "../assets/hero/2.avif";
-import heroImage3 from "../assets/hero/3.png";
-import heroImage4 from "../assets/hero/4.jpg";
+import heroImage1 from "../assets/hero_new/1.avif";
+import heroImage2 from "../assets/hero_new/2.png";
+import heroImage3 from "../assets/hero_new/3.png";
+import heroImage4 from "../assets/hero_new/4.jpg";
+import heroImage5 from "../assets/hero_new/5.jpg";
 
 const slides = [
-    {
-        image: heroImage1,
-        label: "Unified Vision",
-        title: "Design. Build. Operate.",
-        description: "I don't divide Design, Build and Operate; to me they are one.",
-    },
-    {
-        image: heroImage2,
-        label: "Architectural Excellence",
-        title: "Redefining standards\nfor exceptional interiors",
-        description: "Since 2002, crafting innovative brands and unique visual designs.",
-    },
-    {
-        image: heroImage3,
-        label: "Luxury Living",
-        title: "Bespoke environments\ntailored to your lifestyle",
-        description: "Creating spaces that harmonize form and function with timeless elegance.",
-    },
-    {
-        image: heroImage4,
-        label: "Phillip Jeffries",
-        title: "Phillip Jeffries Showroom",
-        description: "Innovative wallcoverings and textiles for premium interior designs.",
-    },
+    { image: heroImage1, label: "Slide 1" },
+    { image: heroImage2, label: "Slide 2" },
+    { image: heroImage3, label: "Slide 3" },
+    { image: heroImage4, label: "Slide 4" },
+    { image: heroImage5, label: "Slide 5" },
 ];
 
 export const HeroCarousel = () => {
