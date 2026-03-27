@@ -4,7 +4,7 @@ import { useState, useMemo } from "react";
 import { ProjectModal } from "./ProjectModal";
 
 // Category Top Images
-import hospTop from "../assets/projects/hospital/top.jpg";
+import hospTop from "../assets/projects/hospital/top.png";
 import resTop from "../assets/projects/residential/top.png";
 import indTop from "../assets/projects/industrial/top.png";
 
