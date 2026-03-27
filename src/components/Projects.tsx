@@ -154,15 +154,23 @@ export const Projects = ({ categoryFilter }: { categoryFilter?: string }) => {
                         >
                             <p className="text-architectural text-black/80 text-xl mb-8 uppercase tracking-[0.2em]">{cat.title}</p>
                             {cat.topImage && (
-                                <div className="relative w-full aspect-[4/3] md:aspect-[21/9] mb-12 overflow-hidden flex items-center justify-center group">
+                                <div className={`relative w-full mb-12 overflow-hidden flex items-center justify-center group ${
+                                    cat.id === 'residential' ? '' : 'aspect-[4/3] md:aspect-[21/9]'
+                                }`}>
                                     <img
                                         src={cat.topImage}
-                                        className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1500ms]"
+                                        className={`${
+                                            cat.id === 'residential' 
+                                                ? 'w-full h-[60vh] md:h-auto md:max-h-[85vh] object-cover md:object-contain bg-black/5' 
+                                                : 'absolute inset-0 w-full h-full object-cover group-hover:scale-105'
+                                        } grayscale group-hover:grayscale-0 transition-all duration-[1500ms]`}
                                     />
                                     <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors" />
-                                    <h3 className="relative z-10 text-center uppercase tracking-[0.3em] font-light text-3xl md:text-5xl lg:text-7xl text-white px-8">
-                                        {cat.description}
-                                    </h3>
+                                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                        <h3 className="relative z-10 text-center uppercase tracking-[0.3em] font-light text-3xl md:text-5xl lg:text-7xl text-white px-8">
+                                            {cat.description}
+                                        </h3>
+                                    </div>
                                 </div>
                             )}
                         </motion.div>
