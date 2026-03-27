@@ -5,14 +5,12 @@ import heroImage1 from "../assets/hero_new/1.avif";
 import heroImage2 from "../assets/hero_new/2.png";
 import heroImage3 from "../assets/hero_new/3.png";
 import heroImage4 from "../assets/hero_new/4.jpg";
-import heroImage5 from "../assets/hero_new/5.jpg";
 
 const slides = [
     { image: heroImage1, label: "Slide 1" },
     { image: heroImage2, label: "Slide 2" },
     { image: heroImage3, label: "Slide 3" },
     { image: heroImage4, label: "Slide 4" },
-    { image: heroImage5, label: "Slide 5" },
 ];
 
 export const HeroCarousel = () => {

@@ -33,7 +33,7 @@ import resDM2 from "../assets/projects/residential/Mr_and_Mrs_Miller_Residence_A
 import resDM3 from "../assets/projects/residential/2023_KMS_Vaughn_Imbornone/top.jpg";
 
 // Industrial Images
-import indFeat1 from "../assets/projects/industrial/1,2024_HMGMA_Lobby/1.png";
+import indFeat1 from "../assets/projects/industrial/1,2024_HMGMA_Lobby/top.jpg";
 import indFeat2 from "../assets/projects/industrial/2,Atlanta_Classic_Cars_Duluth_GA/top.avif";
 import indFeat3 from "../assets/projects/industrial/3,KIA_Souvenir_Shop_Lobby_West_Point_GA/top.png";
 import indDM1 from "../assets/projects/industrial/Hyundai_PowerTech_West_Point_GA/top.avif";
@@ -95,7 +95,7 @@ const categoriesData = [
         topImage: indTop,
         projects: [
             { id: "i1", category: "Industrial", name: "Hyundai PowerTech\nWest Point GA", image: indDM1, folderName: "Hyundai_PowerTech_West_Point_GA" },
-            { id: "i2", category: "Industrial", name: "HMGMA Lobby\nSavannah GA", image: indFeat1, folderName: "1,2024_HMGMA_Lobby" },
+            { id: "i2", category: "Industrial", name: "Hyundai Transys\nSavannah GA", image: indFeat1, folderName: "1,2024_HMGMA_Lobby" },
             { id: "i3", category: "Industrial", name: "LS Cable Showroom\nSandy Spring GA", image: indDM3, folderName: "LS_Cable_System_USA_Showroom_Sandy_Spring_GA" },
             { id: "i4", category: "Industrial", name: "KIA Souvenir Shop\nWest Point GA", image: indFeat3, folderName: "3,KIA_Souvenir_Shop_Lobby_West_Point_GA" },
             { id: "i5", category: "Industrial", name: "KIA Paint Shop\nWest Point GA", image: indDM2, folderName: "KIA_Paint_West_Point_GA" },

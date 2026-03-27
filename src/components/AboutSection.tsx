@@ -1,25 +1,10 @@
-import { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
-// Slide images
-import slide1 from "../assets/about/slide-1.png";
-import slide2 from "../assets/about/slide-2.png";
-import slide3 from "../assets/about/slide-5.png";
+// Image
+import singleSlide from "../assets/about/1.png";
 import philosophyBg from "../assets/about/philosophy-bg.jpg";
 
-const slides = [slide1, slide2, slide3];
-
 export const AboutSection = () => {
-    const [currentIdx, setCurrentIdx] = useState(0);
-
-    const nextSlide = useCallback(() => {
-        setCurrentIdx((prev) => (prev + 1) % slides.length);
-    }, []);
-
-    useEffect(() => {
-        const timer = setInterval(nextSlide, 3500);
-        return () => clearInterval(timer);
-    }, [nextSlide]);
 
     return (
         <section className="min-h-screen px-8 md:px-24 bg-white overflow-hidden relative flex items-center py-32">
@@ -69,23 +54,13 @@ export const AboutSection = () => {
                         </h2>
                     </div>
 
-                    {/* Image Slider - Adjusted aspect ratio and fit to show full images */}
+                    {/* Main Image */}
                     <div className="w-full aspect-[4/3] md:aspect-[16/10] bg-stone-100 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl border border-black/5">
-                        <AnimatePresence initial={false}>
-                            <motion.img
-                                key={currentIdx}
-                                src={slides[currentIdx]}
-                                alt={`Project ${currentIdx + 1}`}
-                                initial={{ opacity: 0, scale: 1.02 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0 }}
-                                transition={{
-                                    opacity: { duration: 1.2, ease: "easeInOut" },
-                                    scale: { duration: 2, ease: [0.16, 1, 0.3, 1] }
-                                }}
-                                className="absolute inset-0 w-full h-full object-contain p-4 brightness-[0.98]"
-                            />
-                        </AnimatePresence>
+                        <img
+                            src={singleSlide}
+                            alt="About Studio"
+                            className="absolute inset-0 w-full h-full object-contain p-4 brightness-[0.98]"
+                        />
                         {/* Subtle overlay to soften the transition */}
                         <div className="absolute inset-0 bg-black/[0.02] pointer-events-none" />
                     </div>
