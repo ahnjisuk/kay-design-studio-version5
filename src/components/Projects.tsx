@@ -219,27 +219,57 @@ export const Projects = ({ categoryFilter }: { categoryFilter?: string }) => {
                                     <div className="h-[1px] bg-black/10 flex-grow" />
                                     <ChevronRight className="w-4 h-4 text-black/20" />
                                 </div>
-                                <div className="flex overflow-x-auto pb-8 gap-8 no-scrollbar scroll-smooth">
-                                    {cat.projects.slice(3).map((project, idx) => (
-                                        <div
-                                            key={project.id}
-                                            onClick={() => setSelectedProject(project)}
-                                            className="group flex-shrink-0 w-80 aspect-video border border-black/5 hover:border-black/20 transition-all cursor-pointer bg-white/50 overflow-hidden relative"
-                                        >
-                                            <img
-                                                src={project.image}
-                                                className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
-                                            />
-                                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
-                                            <div className="relative z-10 p-6 flex items-end h-full">
-                                                {cat.id !== "residential" && (
-                                                    <p className="text-xs font-light tracking-[0.2em] uppercase text-black group-hover:italic transition-all whitespace-pre-line">
-                                                        {project.name}
-                                                    </p>
-                                                )}
-                                            </div>
+                                <div className="relative overflow-hidden group/marquee pb-8">
+                                    <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
+                                        {/* Group 1 */}
+                                        <div className="flex gap-8 pr-8">
+                                            {cat.projects.slice(3).map((project, idx) => (
+                                                <div
+                                                    key={project.id}
+                                                    onClick={() => setSelectedProject(project)}
+                                                    className="group flex-shrink-0 w-80 aspect-video border border-black/5 hover:border-black/20 transition-all cursor-pointer bg-white/50 overflow-hidden relative"
+                                                >
+                                                    <img
+                                                        src={project.image}
+                                                        className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                                    />
+                                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                                                    <div className="relative z-10 p-6 flex items-end h-full">
+                                                        {cat.id !== "residential" && (
+                                                            <p className="text-xs font-light tracking-[0.2em] uppercase text-black group-hover:italic transition-all whitespace-pre-line">
+                                                                {project.name}
+                                                            </p>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            ))}
                                         </div>
-                                    ))}
+                                        {/* Group 2 */}
+                                        <div className="flex gap-8 pr-8" aria-hidden="true">
+                                            {cat.projects.slice(3).map((project, idx) => (
+                                                <div
+                                                    key={`${project.id}-dup`}
+                                                    onClick={() => setSelectedProject(project)}
+                                                    className="group flex-shrink-0 w-80 aspect-video border border-black/5 hover:border-black/20 transition-all cursor-pointer bg-white/50 overflow-hidden relative"
+                                                >
+                                                    <img
+                                                        src={project.image}
+                                                        className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                                                    />
+                                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors" />
+                                                    <div className="relative z-10 p-6 flex items-end h-full">
+                                                        {cat.id !== "residential" && (
+                                                            <p className="text-xs font-light tracking-[0.2em] uppercase text-black group-hover:italic transition-all whitespace-pre-line">
+                                                                {project.name}
+                                                            </p>
+                                                        )}
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-stone-50 to-transparent pointer-events-none" />
+                                    <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-stone-50 to-transparent pointer-events-none" />
                                 </div>
                             </motion.div>
                         )}
